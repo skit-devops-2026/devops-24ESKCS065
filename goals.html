@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaceTrack - Goals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <h1 class="logo">PlaceTrack</h1>
+        <p class="menu-title">Menu</p>
+        <a href="index.html" class="menu-link">Dashboard</a>
+        <a href="dsa.html" class="menu-link">DSA Tracker</a>
+        <a href="subjects.html" class="menu-link">Subjects</a>
+        <a href="goals.html" class="menu-link active">Goals</a>
+        <a href="profile.html" class="menu-link">Profile</a>
+        <button onclick="logout()" class="logout">Logout</button>
+    </aside>
+
+    <div class="main-area">
+        <header class="header">
+            <div><h2>Goals</h2><p>Set targets for your preparation</p></div>
+            <span>Deva</span>
+        </header>
+
+        <main class="content">
+
+            <div class="page-heading flex justify-between items-center">
+                <div>
+                    <h1>My Goals</h1>
+                    <p>Keep track of your daily and weekly targets.</p>
+                </div>
+                <button id="addGoalBtn" class="primary-btn small-btn">Add Goal</button>
+            </div>
+
+            <section id="goalList" class="goal-list">
+
+                <label class="goal-item">
+                    <input type="checkbox">
+                    <span>Solve 50 DSA problems this month</span>
+                </label>
+
+                <label class="goal-item">
+                    <input type="checkbox" checked>
+                    <span>Complete DBMS revision</span>
+                </label>
+
+                <label class="goal-item">
+                    <input type="checkbox">
+                    <span>Practice aptitude five days a week</span>
+                </label>
+
+                <label class="goal-item">
+                    <input type="checkbox">
+                    <span>Complete one mock interview</span>
+                </label>
+
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

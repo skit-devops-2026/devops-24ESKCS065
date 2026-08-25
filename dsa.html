@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaceTrack - DSA Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h1 class="logo">PlaceTrack</h1>
+        <p class="menu-title">Menu</p>
+        <a href="index.html" class="menu-link">Dashboard</a>
+        <a href="dsa.html" class="menu-link active">DSA Tracker</a>
+        <a href="subjects.html" class="menu-link">Subjects</a>
+        <a href="goals.html" class="menu-link">Goals</a>
+        <a href="profile.html" class="menu-link">Profile</a>
+        <button onclick="logout()" class="logout">Logout</button>
+    </aside>
+
+    <div class="main-area">
+        <header class="header">
+            <div><h2>DSA Tracker</h2><p>Track your problem solving progress</p></div>
+            <span>Deva</span>
+        </header>
+
+        <main class="content">
+
+            <div class="page-heading flex justify-between items-center">
+                <div>
+                    <h1>DSA Tracker</h1>
+                    <p>Practice topic by topic and track your progress.</p>
+                </div>
+                <button id="addProblemBtn" class="primary-btn small-btn">Add Problem</button>
+            </div>
+
+            <section class="stats-grid">
+                <div class="simple-card"><p>Problems Solved</p><h2>42</h2></div>
+                <div class="simple-card"><p>In Progress</p><h2>8</h2></div>
+                <div class="simple-card"><p>Monthly Target</p><h2>65</h2></div>
+            </section>
+
+            <section class="simple-card">
+                <h2 class="section-title">Topic Progress</h2>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Total</th>
+                            <th>Solved</th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Arrays</td><td>20</td><td>15</td><td>75%</td></tr>
+                        <tr><td>Strings</td><td>15</td><td>10</td><td>67%</td></tr>
+                        <tr><td>Linked List</td><td>15</td><td>8</td><td>53%</td></tr>
+                        <tr><td>Trees</td><td>20</td><td>6</td><td>30%</td></tr>
+                        <tr><td>Graphs</td><td>15</td><td>4</td><td>27%</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<div id="problemModal" class="modal hidden">
+    <div class="modal-box">
+        <h2>Add DSA Problem</h2>
+
+        <label>Problem Name</label>
+        <input id="problemName" class="input" placeholder="Enter problem name">
+
+        <label>Topic</label>
+        <select id="problemTopic" class="input">
+            <option>Arrays</option>
+            <option>Strings</option>
+            <option>Linked List</option>
+            <option>Trees</option>
+            <option>Graphs</option>
+        </select>
+
+        <label>Difficulty</label>
+        <select id="problemDifficulty" class="input">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+
+        <button id="saveProblem" class="primary-btn">Save Problem</button>
+        <button id="closeModal" class="secondary-btn">Cancel</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

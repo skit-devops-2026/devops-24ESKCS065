@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaceTrack - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h1 class="logo">PlaceTrack</h1>
+
+        <p class="menu-title">Menu</p>
+
+        <a href="index.html" class="menu-link active">Dashboard</a>
+        <a href="dsa.html" class="menu-link">DSA Tracker</a>
+        <a href="subjects.html" class="menu-link">Subjects</a>
+        <a href="goals.html" class="menu-link">Goals</a>
+        <a href="profile.html" class="menu-link">Profile</a>
+
+        <button onclick="logout()" class="logout">Logout</button>
+    </aside>
+
+    <div class="main-area">
+
+        <header class="header">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Placement preparation tracker</p>
+            </div>
+            <span>Deva</span>
+        </header>
+
+        <main class="content">
+
+            <div class="page-heading">
+                <h1>Welcome back, Deva</h1>
+                <p>Keep working on your placement preparation.</p>
+            </div>
+
+            <section class="stats-grid">
+
+                <div class="simple-card">
+                    <p>Placement Readiness</p>
+                    <h2>72%</h2>
+                    <div class="progress"><div style="width:72%"></div></div>
+                </div>
+
+                <div class="simple-card">
+                    <p>DSA Progress</p>
+                    <h2>65%</h2>
+                    <span>42 problems solved</span>
+                </div>
+
+                <div class="simple-card">
+                    <p>Study Hours</p>
+                    <h2>18 hrs</h2>
+                    <span>This week</span>
+                </div>
+
+                <div class="simple-card">
+                    <p>Current Streak</p>
+                    <h2>5 days</h2>
+                    <span>Keep going</span>
+                </div>
+
+            </section>
+
+            <section class="two-column">
+
+                <div class="simple-card">
+                    <div class="card-heading">
+                        <h2>Today's Tasks</h2>
+                        <span id="taskCount">0/4 completed</span>
+                    </div>
+
+                    <div class="task-list">
+                        <label class="task">
+                            <input type="checkbox" class="task-box">
+                            Solve 2 Array problems
+                        </label>
+
+                        <label class="task">
+                            <input type="checkbox" class="task-box">
+                            Revise DBMS
+                        </label>
+
+                        <label class="task">
+                            <input type="checkbox" class="task-box">
+                            Practice aptitude questions
+                        </label>
+
+                        <label class="task">
+                            <input type="checkbox" class="task-box">
+                            Read one interview question
+                        </label>
+                    </div>
+                </div>
+
+                <div class="simple-card">
+                    <div class="card-heading">
+                        <h2>Subject Progress</h2>
+                        <a href="subjects.html">View all</a>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>DBMS</span>
+                        <strong>75%</strong>
+                    </div>
+                    <div class="progress"><div style="width:75%"></div></div>
+
+                    <div class="subject-row">
+                        <span>Operating System</span>
+                        <strong>60%</strong>
+                    </div>
+                    <div class="progress"><div style="width:60%"></div></div>
+
+                    <div class="subject-row">
+                        <span>Computer Networks</span>
+                        <strong>50%</strong>
+                    </div>
+                    <div class="progress"><div style="width:50%"></div></div>
+
+                    <div class="subject-row">
+                        <span>OOP</span>
+                        <strong>65%</strong>
+                    </div>
+                    <div class="progress"><div style="width:65%"></div></div>
+                </div>
+
+            </section>
+
+            <section class="simple-card">
+                <div class="card-heading">
+                    <h2>DSA Progress</h2>
+                    <a href="dsa.html">View tracker</a>
+                </div>
+
+                <div class="dsa-row">
+                    <span>Arrays</span>
+                    <div class="progress"><div style="width:75%"></div></div>
+                    <strong>75%</strong>
+                </div>
+
+                <div class="dsa-row">
+                    <span>Strings</span>
+                    <div class="progress"><div style="width:67%"></div></div>
+                    <strong>67%</strong>
+                </div>
+
+                <div class="dsa-row">
+                    <span>Linked List</span>
+                    <div class="progress"><div style="width:53%"></div></div>
+                    <strong>53%</strong>
+                </div>
+
+                <div class="dsa-row">
+                    <span>Trees</span>
+                    <div class="progress"><div style="width:30%"></div></div>
+                    <strong>30%</strong>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
