@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PlaceTrack - Planner</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="layout"><aside class="sidebar"><h1 class="logo">PlaceTrack</h1><p class="menu-title">Workspace</p>
+<a href="index.html" class="menu-link">Dashboard</a><a href="dsa.html" class="menu-link">DSA Tracker</a><a href="subjects.html" class="menu-link">Subjects</a><a href="aptitude.html" class="menu-link">Aptitude</a><a href="planner.html" class="menu-link active">Study Planner</a><a href="goals.html" class="menu-link">Goals</a><a href="placement.html" class="menu-link">Placement</a><a href="profile.html" class="menu-link">Profile</a><button onclick="logout()" class="logout">Logout</button></aside>
+<div class="main-area"><header class="header"><div><h2>Study Planner</h2><p>Plan your preparation week</p></div><span>Deva</span></header><main class="content">
+<div class="page-heading action-heading"><div><h1>Weekly Study Plan</h1><p>Organize your preparation time.</p></div><button id="addPlanBtn" class="primary-btn">Add Task</button></div>
+<section id="planList" class="planner-grid">
+<div class="day-card"><h2>Monday</h2><div class="plan-item"><b>DSA</b><span>1 hour</span></div><div class="plan-item"><b>DBMS</b><span>45 min</span></div><div class="plan-item"><b>Aptitude</b><span>30 min</span></div></div>
+<div class="day-card"><h2>Tuesday</h2><div class="plan-item"><b>DSA</b><span>1 hour</span></div><div class="plan-item"><b>Operating System</b><span>45 min</span></div><div class="plan-item"><b>Coding</b><span>30 min</span></div></div>
+<div class="day-card"><h2>Wednesday</h2><div class="plan-item"><b>DSA</b><span>1 hour</span></div><div class="plan-item"><b>CN</b><span>45 min</span></div><div class="plan-item"><b>Aptitude</b><span>30 min</span></div></div>
+<div class="day-card"><h2>Thursday</h2><div class="plan-item"><b>DBMS</b><span>1 hour</span></div><div class="plan-item"><b>DSA</b><span>45 min</span></div></div>
+<div class="day-card"><h2>Friday</h2><div class="plan-item"><b>DSA</b><span>1 hour</span></div><div class="plan-item"><b>OOP</b><span>45 min</span></div></div>
+<div class="day-card"><h2>Saturday</h2><div class="plan-item"><b>Mock Test</b><span>1 hour</span></div><div class="plan-item"><b>Revision</b><span>1 hour</span></div></div>
+<div class="day-card"><h2>Sunday</h2><div class="plan-item"><b>Weekly Revision</b><span>1 hour</span></div></div>
+</section></main></div></div><script src="js/planner.js"></script><script src="js/script.js"></script></body></html>
