@@ -1,0 +1,7 @@
+document.addEventListener("DOMContentLoaded",function(){
+const modal=document.getElementById("problemModal"),open=document.getElementById("addProblemBtn"),close=document.getElementById("closeModal"),save=document.getElementById("saveProblem"),table=document.getElementById("problemTable"),search=document.getElementById("problemSearch"),filter=document.getElementById("difficultyFilter");
+if(open)open.onclick=()=>modal.classList.remove("hidden");if(close)close.onclick=()=>modal.classList.add("hidden");
+if(save)save.onclick=function(){const name=document.getElementById("problemName").value.trim(),topic=document.getElementById("problemTopic").value,diff=document.getElementById("problemDifficulty").value,status=document.getElementById("problemStatus").value;if(!name){alert("Enter a problem name.");return;}const row=document.createElement("tr");row.innerHTML=`<td>${safe(name)}</td><td>${topic}</td><td>${diff}</td><td class="${status==="Solved"?"done":""}">${status}</td>`;table.appendChild(row);document.getElementById("problemName").value="";modal.classList.add("hidden");};
+function filterRows(){const q=search.value.toLowerCase(),level=filter.value;[...table.querySelectorAll("tr")].forEach(r=>{const text=r.innerText.toLowerCase(),d=r.cells[2].innerText;r.style.display=text.includes(q)&&(level==="all"||d===level)?"":"none";});}
+if(search)search.addEventListener("input",filterRows);if(filter)filter.addEventListener("change",filterRows);
+});function safe(t){const d=document.createElement("div");d.textContent=t;return d.innerHTML;}
