@@ -1,0 +1,35 @@
+
+services:
+  placetrack:
+    image: devaaryan07/placetrack:latest
+    container_name: placetrack
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: placetrack-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - placetrack
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: placetrack-grafana
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
