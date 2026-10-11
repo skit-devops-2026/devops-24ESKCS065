@@ -1,0 +1,42 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placetrack
+  labels:
+    app: placetrack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: placetrack
+  template:
+    metadata:
+      labels:
+        app: placetrack
+    spec:
+      containers:
+        - name: placetrack
+          image: devaaryan07/placetrack:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi

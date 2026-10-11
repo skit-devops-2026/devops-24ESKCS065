@@ -1,8 +1,5 @@
 # PlaceTrack
 
-> Replace every angle-bracket placeholder below. The hygiene check in CI will
-> fail until you do.
-
 ## Author
 
 | Roll No. | Name | GitHub username |
@@ -15,10 +12,9 @@ PlaceTrack is a placement preparation and study management application that help
 
 ## Tech stack
 
-- Frontend: React.js
+- Frontend: HTML, CSS, JavaScript
 - Backend: Node.js + Express.js
-- Database: MongoDB
-
+- Database: MongoDB (planned)
 
 ## Running locally
 
@@ -29,9 +25,8 @@ make run
 
 ## Live URL
 
-<Add once M5 is done. Until then, leave as is.>
+https://placetrack-app.onrender.com
 
 ## Health endpoint
 
-`GET /health` returns the running commit SHA. See `Makefile` and the milestone
-sheet for why this is required.
+`GET /health` returns the application health status, service name, and commit identifier. See `Makefile` and the milestone sheet for why this is required.
